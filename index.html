@@ -18,15 +18,97 @@ Select TWO Additional Features to Add
 <html>
 
 <head>
-  <title>Unit 5 Project</title>
+  <title>XC Cross Country Holiday Party!</title>
   <meta charset="utf-8">
   <style>
+body{font-family:'Times New Roman', Times, serif;
+text-align: center;
+  }
+  .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-  </style>
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(255, 183, 183);
+  color: white;
+  transform: rotateY(180deg);
+}
+ .list {background-color: rgb(255, 187, 196);
+display: flex;
+height: 300px;
+justify-content: space-evenly;
+margin-bottom: 20px;
+} 
+.item{background-color: rgb(177, 255, 196);
+width: 200px;}
+  
+ </style>
+
 </head>
 <body>
+<h1>Holiday Party</h1> 
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://www.emilydrawing.com/wp-content/uploads/2021/10/snowman.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Your Invited!!!</h1>
+      <p>Celebrate this festive season by eating food and playing secret santa!</p>
 
- 
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+
+<p><h1>Guide lines</h1>
+<div class="list">
+<div class="item"> <ol> 
+<li> Maximum of 25 dollars </li>
+<li> bring your favorite snacks</li>
+<LI>Make sure to have fun!!!!</LI>
+</ol> </div>
+</div>
+
+ </ol>
+</p>
 
 </body>
+
 </html>
