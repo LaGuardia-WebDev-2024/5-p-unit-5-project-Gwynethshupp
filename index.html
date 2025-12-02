@@ -1,15 +1,15 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[ yes ] border:, margin:, and padding: 
+[ yes ] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
-[ no ] Feature 5 - Use a .Gif
+[ yes ] Feature 5 - Use a .Gif
 [ no ] Feature 6 - Unique Border Styles
 -->
 
@@ -21,15 +21,16 @@ Select TWO Additional Features to Add
   <title>XC Cross Country Holiday Party!</title>
   <meta charset="utf-8">
   <style>
-body{font-family:'Times New Roman', Times, serif;
+body
+{font-family:'Times New Roman', Times, serif;
 text-align: center;
 background-image: url(https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e1013284f588943cd6e15.gif);
  background-size: cover; }
-
+h1{ color: aliceblue;}
   .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 300px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -81,7 +82,70 @@ background-image: url(https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e101328
  border-bottom-style: dotted;
  
   }
+
+ 
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(252, 183, 183);
+  color: white;
+  transform: rotateY(180deg);
   h1{ color: aliceblue;}
+   
+  .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(255, 183, 183);
+  color: white;
+  transform: rotateY(180deg);
+}
+ .list{ 
+   font-family:cursive;
+   background: rgb(255, 183, 183);
+ width: 250px;
+ margin: auto;
+ border-left-style:groove;
+ border-right-style: groove;
+ border-top-style:dotted;
+ border-bottom-style: dotted;
+ 
+  }
  </style>
 
 </head>
@@ -101,6 +165,7 @@ background-image: url(https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e101328
     </div>
   </div>
 </div> </center>
+
 <br>
 <p><h1><center>Guide lines</center></h1>
 
@@ -113,6 +178,39 @@ background-image: url(https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e101328
 
  </ol>
 </p>
+ <center> -
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://classroomclipart.com/images/gallery/Animations/Christmas/house-with-snow-christmas-trees-animated-clipart.gif" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Location:</h1>
+      <p>Come to _________ for the Festivities to begin!!!! </p>
+
+      <p></p>
+    </div>
+  </div>
+</div> </center>
+ <br>
+
+<center> -
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://i.pinimg.com/474x/40/72/53/4072539ea76cf026edd538797033a7e7.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Location:</h1>
+      <p>The Holiday party starts at 5:30pm! :) </p>
+
+      <p></p>
+    </div>
+  </div>
+</div>
+ </center>
+
+
 
 </body>
 
